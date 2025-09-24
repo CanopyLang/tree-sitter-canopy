@@ -52,7 +52,7 @@ fi
 
 skipped_files=()
 examples_to_parse=()
-all_examples=$(find examples -name '*.elm')
+all_examples=$(find examples \( -name '*.elm' -o -name '*.can' \))
 known_failures=$(cat script/known-failures.txt)
 for example in $all_examples; do
   if [[ ! $known_failures == *$example* ]]; then
