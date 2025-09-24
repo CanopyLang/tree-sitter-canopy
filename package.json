@@ -1,5 +1,5 @@
 {
-  "name": "@CanopyLang/tree-sitter-canopy",
+  "name": "@canopy-lang/canopy-tree-sitter",
   "version": "0.0.1",
   "description": "Tree sitter definitions for canopy",
   "main": "bindings/node",
