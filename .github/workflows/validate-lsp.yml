@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          path: "tree-sitter-elm"
+          path: "tree-sitter-canopy"
       - uses: actions/checkout@v4
         name: Checkout main branch of elm-language-server
         with:
@@ -29,11 +29,11 @@ jobs:
           path: "elm-language-server"
       - name: Install tree-sitter dependencies and generate wasm bundle
         run: |
-          cd tree-sitter-elm/
+          cd tree-sitter-canopy/
           npm i
           npm run build
           npx tree-sitter build-wasm
-          mv ./tree-sitter-elm.wasm ../elm-language-server/tree-sitter-elm.wasm -f
+          mv ./tree-sitter-canopy.wasm ../elm-language-server/tree-sitter-canopy.wasm -f
 
       - name: Install elm-language-server dependencies, compile, and run tests
         run: |

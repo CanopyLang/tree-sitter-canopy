@@ -1,10 +1,10 @@
-[![Build Status](https://github.com/elm-tooling/tree-sitter-elm/actions/workflows/test.yml/badge.svg)](https://github.com/elm-tooling/tree-sitter-elm/actions/workflows/test.yml)
+[![Build Status](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml/badge.svg)](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml)
 
-# Elm tree sitter
+# Canopy tree sitter
 
 ## Why am I doing this?
 
-I believe that Elm would greatly benefit from better tooling, the ultimate goal is to write a language server integration. This is a possible building block for that.
+I believe that Canopy (based on Elm) would greatly benefit from better tooling, the ultimate goal is to write a language server integration. This is a possible building block for that.
 
 What it brings to the table:
 
@@ -27,5 +27,5 @@ Very very big thanks goes out to @klazuka and the people of [intellij-elm](https
 
 ## Want to help?
 
-Help writing some tests or simply find valid elm files, that fail parsing.
+Help writing some tests or simply find valid canopy (.can) or elm (.elm) files, that fail parsing.
 Test are located in the `test` folder and separated in parser tests and highlighting tests.

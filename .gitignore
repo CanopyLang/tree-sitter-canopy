@@ -60,5 +60,9 @@ target/
 # Examples generated during automated tests
 examples/**
 examples-full/**
+!examples/basic.can
+!examples/test.can
 !examples/Basic.elm
 !examples/Test.elm
+!examples/basic.elm
+!examples/test.elm
