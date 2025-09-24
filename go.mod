@@ -1,4 +1,4 @@
-module github.com/elm-tooling/tree-sitter-elm
+module github.com/CanopyLang/tree-sitter-canopy
 
 go 1.22
 

@@ -1,10 +1,12 @@
 {
-  "name": "@elm-tooling/tree-sitter-elm",
+  "name": "@CanopyLang/tree-sitter-canopy",
   "version": "5.8.0",
-  "description": "Tree sitter definitions for elm",
+  "description": "Tree sitter definitions for canopy",
   "main": "bindings/node",
   "types": "bindings/node",
   "keywords": [
+    "canopy",
+    "canopy-lang",
     "elm",
     "elm-lang",
     "tree-sitter",
@@ -44,16 +46,16 @@
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
     "build": "tree-sitter generate",
-    "parse-basic": "tree-sitter parse ./examples/basic.elm",
-    "parse-test": "tree-sitter parse --debug ./examples/test.elm",
+    "parse-basic": "tree-sitter parse ./examples/basic.can",
+    "parse-test": "tree-sitter parse ./examples/test.can",
     "test": "tree-sitter test && script/parse-examples",
     "test-skip-download": "tree-sitter test && script/parse-examples -s",
     "test-full": "tree-sitter test && script/parse-examples-full",
     "test-full-skip-download": "tree-sitter test && script/parse-examples-full -s",
     "test-only": "tree-sitter test",
-    "test-highlighting": "tree-sitter highlight test/highlight/basic.elm",
-    "test-tags": "tree-sitter tags test/highlight/basic.elm",
-    "generate-wasm": "tree-sitter build --wasm && mv ./tree-sitter-elm.wasm ./docs/js/tree-sitter-elm.wasm"
+    "test-highlighting": "tree-sitter highlight test/highlight/basic.can",
+    "test-tags": "tree-sitter tags test/highlight/basic.can",
+    "generate-wasm": "tree-sitter build --wasm && mv ./tree-sitter-canopy.wasm ./docs/js/tree-sitter-canopy.wasm"
   },
-  "repository": "https://github.com/elm-tooling/tree-sitter-elm"
+  "repository": "https://github.com/CanopyLang/tree-sitter-canopy"
 }
