@@ -2,8 +2,8 @@ ifeq ($(OS),Windows_NT)
 $(error Windows is not supported)
 endif
 
-LANGUAGE_NAME := tree-sitter-elm
-HOMEPAGE_URL := https://github.com/elm-tooling/tree-sitter-elm
+LANGUAGE_NAME := tree-sitter-canopy
+HOMEPAGE_URL := https://github.com/CanopyLang/tree-sitter-canopy
 VERSION := 5.8.0
 
 # repository

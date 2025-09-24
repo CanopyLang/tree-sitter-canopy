@@ -2,11 +2,12 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "elm",
-      "camelcase": "Elm",
-      "scope": "source.elm",
+      "name": "canopy",
+      "camelcase": "Canopy",
+      "scope": "source.canopy",
       "path": ".",
       "file-types": [
+        "can",
         "elm"
       ],
       "highlights": "queries/highlights.scm",
@@ -17,7 +18,7 @@
   "metadata": {
     "version": "5.8.0",
     "license": "MIT",
-    "description": "Tree sitter definitions for elm",
+    "description": "Tree sitter definitions for canopy",
     "authors": [
       {
         "name": "Kolja Lampe",
@@ -25,7 +26,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/elm-tooling/tree-sitter-elm"
+      "repository": "https://github.com/CanopyLang/tree-sitter-canopy"
     }
   },
   "bindings": {
