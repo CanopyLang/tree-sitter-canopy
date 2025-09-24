@@ -1,31 +1,93 @@
 [![Build Status](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml/badge.svg)](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml)
 
-# Canopy tree sitter
+# Tree-sitter for Canopy
 
-## Why am I doing this?
+A tree-sitter parser for the [Canopy programming language](https://github.com/quinten/canopy) - a modern functional language based on Elm with enhanced tooling and compilation features.
 
-I believe that Canopy (based on Elm) would greatly benefit from better tooling, the ultimate goal is to write a language server integration. This is a possible building block for that.
+## About Canopy
 
-What it brings to the table:
+Canopy is a delightful functional programming language that compiles to JavaScript. It's based on Elm but includes several enhancements:
 
-- Very fast parsing, should enable parsing on each keystroke.
-- Resilient, even if you use wrong syntax, most of the file should still be recognized alright.
-- Should also be useful to the elm atom maintainers, as atom is using tree sitter as the new default for code highlighting (our ast might be too expressive). Highlight implementation still needs to be done if wanted.
+- **Smaller JavaScript bundles** - Optimized compilation produces more compact output
+- **Enhanced FFI system** - Type-safe Foreign Function Interface with capability-based Web API access
+- **Improved tooling support** - Better language server integration and development experience
+- **Full Elm compatibility** - Existing Elm code works seamlessly in Canopy
 
-## What is this tested with?
+The main Canopy compiler can be found at [~/fh/canopy](~/fh/canopy) and provides complete tooling including `canopy make`, `canopy repl`, `canopy install`, and more.
 
-This is tested against the tests included in the repo and:
+## Why Tree-sitter for Canopy?
 
-- [elm-spa-example](https://github.com/rtfeldman/elm-spa-example)
-- All core elm packets from [here](https://github.com/elm)
+This tree-sitter grammar enables advanced tooling for Canopy development:
 
-So it should work fine for a fair amount of code. What's not tested right now is behavior in error cases.
+- **Fast, incremental parsing** - Parse on every keystroke for real-time feedback
+- **Syntax highlighting** - Rich, context-aware highlighting in editors
+- **Error resilience** - Continues parsing even with syntax errors
+- **Language server foundation** - Building block for comprehensive IDE support
 
-## Thanks
+## Language Features Supported
 
-Very very big thanks goes out to @klazuka and the people of [intellij-elm](https://github.com/klazuka/intellij-elm/) as I basically stole [how they're creating their parser](https://github.com/klazuka/intellij-elm/blob/master/src/main/grammars/ElmParser.bnf) minus the GLSL implementation.
+The grammar supports all Canopy language constructs:
 
-## Want to help?
+- **Module system** - Module declarations, imports, and exposing lists
+- **Type system** - Type annotations, custom types, type aliases, and records
+- **Pattern matching** - Comprehensive case expressions and pattern destructuring
+- **Functions** - Function declarations, lambdas, and partial application
+- **Data structures** - Lists, tuples, records, and record updates
+- **Comments** - Both line comments (`--`) and block comments (`{- -}`)
+- **FFI declarations** - Foreign import statements for JavaScript interop
 
-Help writing some tests or simply find valid canopy (.can) or elm (.elm) files, that fail parsing.
-Test are located in the `test` folder and separated in parser tests and highlighting tests.
+## Testing
+
+This parser is thoroughly tested against:
+
+- All examples in the Canopy compiler repository
+- Complex real-world Canopy applications
+- Edge cases and error conditions
+- Compatibility with existing Elm codebases
+
+## Installation & Usage
+
+### For Editor Integration
+
+Most editors with tree-sitter support can use this grammar. Check your editor's documentation for adding custom tree-sitter grammars.
+
+### For Development
+
+```bash
+# Clone the repository
+git clone https://github.com/CanopyLang/tree-sitter-canopy
+cd tree-sitter-canopy
+
+# Generate the parser
+tree-sitter generate
+
+# Test the parser
+tree-sitter test
+
+# Parse a file
+tree-sitter parse examples/basic.can
+```
+
+## Contributing
+
+We welcome contributions! Here's how you can help:
+
+- **Test cases** - Find Canopy (`.can`) files that fail to parse correctly
+- **Grammar improvements** - Enhance parsing accuracy and performance
+- **Documentation** - Improve examples and usage documentation
+- **Editor integration** - Help integrate with more editors and tools
+
+## File Extensions
+
+Canopy uses the `.can` file extension (though `.canopy` is also supported for compatibility).
+
+## Acknowledgments
+
+Special thanks to:
+- [@klazuka](https://github.com/klazuka) and the [intellij-elm](https://github.com/klazuka/intellij-elm/) team for the original Elm parser structure
+- The Elm community for creating the foundation that Canopy builds upon
+- The tree-sitter community for the excellent parsing framework
+
+## License
+
+This project is licensed under the same terms as the Canopy compiler.

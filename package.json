@@ -1,6 +1,6 @@
 {
   "name": "@CanopyLang/tree-sitter-canopy",
-  "version": "5.8.0",
+  "version": "0.0.1",
   "description": "Tree sitter definitions for canopy",
   "main": "bindings/node",
   "types": "bindings/node",
