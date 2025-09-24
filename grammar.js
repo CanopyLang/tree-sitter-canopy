@@ -12,7 +12,7 @@ const PREC = {
 };
 
 module.exports = grammar({
-  name: "elm",
+  name: "canopy",
 
   conflicts: ($) => [
     [$.upper_case_qid, $.value_qid],

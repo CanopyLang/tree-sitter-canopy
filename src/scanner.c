@@ -388,7 +388,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
  * This function allocates the persistent state of the parser that is passed
  * into the other API functions.
  */
-void *tree_sitter_elm_external_scanner_create() {
+void *tree_sitter_canopy_external_scanner_create() {
     Scanner *scanner = (Scanner *)calloc(1, sizeof(Scanner));
     return scanner;
 }
@@ -397,7 +397,7 @@ void *tree_sitter_elm_external_scanner_create() {
  * Main logic entry point.
  * Since the state is a singular vector, it can just be cast and used directly.
  */
-bool tree_sitter_elm_external_scanner_scan(void *payload, TSLexer *lexer,
+bool tree_sitter_canopy_external_scanner_scan(void *payload, TSLexer *lexer,
                                            const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
     return scan(scanner, lexer, valid_symbols);
@@ -408,7 +408,7 @@ bool tree_sitter_elm_external_scanner_scan(void *payload, TSLexer *lexer,
  * This is normally more complex, but since this parser's state constists solely
  * of a vector of integers, it can just be copied.
  */
-unsigned tree_sitter_elm_external_scanner_serialize(void *payload,
+unsigned tree_sitter_canopy_external_scanner_serialize(void *payload,
                                                     char *buffer) {
     Scanner *scanner = (Scanner *)payload;
     size_t size = 0;
@@ -452,7 +452,7 @@ unsigned tree_sitter_elm_external_scanner_serialize(void *payload,
  * the saved state of a different position (e.g. when doing incremental
  * parsing).
  */
-void tree_sitter_elm_external_scanner_deserialize(void *payload,
+void tree_sitter_canopy_external_scanner_deserialize(void *payload,
                                                   const char *buffer,
                                                   unsigned length) {
     Scanner *scanner = (Scanner *)payload;
@@ -488,7 +488,7 @@ void tree_sitter_elm_external_scanner_deserialize(void *payload,
 /**
  * Destroy the state.
  */
-void tree_sitter_elm_external_scanner_destroy(void *payload) {
+void tree_sitter_canopy_external_scanner_destroy(void *payload) {
     Scanner *scanner = (Scanner *)payload;
     VEC_FREE(scanner->indents);
     VEC_FREE(scanner->runback);
