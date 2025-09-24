@@ -1,4 +1,4 @@
-![Canopy Logo](images/canopy.png)
+<img src="images/canopy.png" alt="Canopy Logo" width="100" height="100">
 
 [![Build Status](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml/badge.svg)](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml)
 
