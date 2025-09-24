@@ -1,3 +1,5 @@
+![Canopy Logo](images/canopy.png)
+
 [![Build Status](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml/badge.svg)](https://github.com/CanopyLang/tree-sitter-canopy/actions/workflows/test.yml)
 
 # Tree-sitter for Canopy
